@@ -30,6 +30,9 @@ jobs:
       - name: Setup Docker buildx
         uses: docker/setup-buildx-action@v3
 
+      - name: Run Sync Script
+        uses: ./wait-for-webserver.sh
+
       - name: Launch Web Service
         run: docker compose up -d
 
