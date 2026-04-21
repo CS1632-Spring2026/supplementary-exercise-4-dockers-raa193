@@ -33,6 +33,9 @@ jobs:
       - name: Launch Web Service
         run: docker compose up -d
 
+      - name: Make script executable
+        run: chmod +x wait-for-webserver.sh
+
       - name: Run Sync Script
         run: ./wait-for-webserver.sh
 
